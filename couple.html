@@ -107,5 +107,66 @@
 
   </div>
 
+  <footer style="background:#111; color:#ccc; text-align:center; padding:15px 0; font-size:14px; margin-top:40px; position: relative;">
+  © 2025 YourSiteName. All rights reserved. | 
+  <a href="/privacy.html" style="color:#f77; text-decoration:none;">Privacy Policy</a>
+
+  <div style="margin-top: 10px; font-size: 12px; color: #aaa;">
+    Love Count: <span id="visitorCounter">Loading...</span>
+  </div>
+</footer>
+
+<div id="bottomAdBanner" style="position: fixed; bottom: 10px; right: 10px; z-index: 9999; text-align: right;">
+  <div style="position: relative; display: inline-block;">
+    <span onclick="document.getElementById('bottomAdBanner').style.display='none'" style="position: absolute; top: -10px; left: -10px; background: #000; color: #fff; border-radius: 50%; width: 20px; height: 20px; font-size: 14px; line-height: 20px; text-align: center; cursor: pointer;">×</span>
+    <a href="https://cdy2db1.cool-meetlovers.com/whu8dv9?s1=blogger&amp;cid=blogger" rel="nofollow sponsored" target="_blank">
+      <img alt="Ad Banner" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEicK9Vdl5BRoHz98XLlM-8dcFKc65oEOnnue5t_243h7WkWE7XP7zn621T1H7OpFE0sq5O3awkXSLgGBbCaS9U_hGfyr8ZFEezw89NUM0XeD3BHPq0p2vlP2CrVb14MCj17lvUXAs0vK6z5w6L2GbvrAxDJtmfS44eBKWxCF3Cyg7BQRrCHlME0EXrC0cw/s1600/9xfkrf.gif" style="width: 160px; max-width: 50vw; height: auto; display: inline-block;">
+    </a>
+  </div>
+</div>
+
+<style>
+  body {
+    padding-bottom: 90px; /* Banner ve boşluk için yeterli */
+  }
+
+  @media (max-width: 480px) {
+    #bottomAdBanner {
+      bottom: 10px;
+      right: 10px;
+    }
+    #bottomAdBanner img {
+      width: 50vw;
+    }
+  }
+</style>
+
+<script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-database-compat.js"></script>
+
+<script>
+  const firebaseConfig = {
+    apiKey: "AIzaSyCS23KVrFtpJ3AGufGOfqASg3bhywy-Y74",
+    authDomain: "new-project-e229e.firebaseapp.com",
+    databaseURL: "https://new-project-e229e-default-rtdb.firebaseio.com",
+    projectId: "new-project-e229e",
+    storageBucket: "new-project-e229e.firebasestorage.app",
+    messagingSenderId: "174517118266",
+    appId: "1:174517118266:web:cd55e2524739a299d95c03",
+    measurementId: "G-Z56E4HVHLB"
+  };
+
+  firebase.initializeApp(firebaseConfig);
+  const database = firebase.database();
+  const counterRef = database.ref('visits');
+
+  counterRef.transaction(currentValue => (currentValue || 0) + 1);
+
+  counterRef.on('value', snapshot => {
+    document.getElementById('visitorCounter').textContent = snapshot.val();
+  });
+</script>
+
+
 </body>
 </html>
