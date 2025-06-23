@@ -11,7 +11,7 @@
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0 0 90px 0;
-      overflow-x: hidden; /* Taşmayı engelle */
+      overflow-x: hidden;
     }
 
     nav {
@@ -55,14 +55,14 @@
       display: flex;
       justify-content: center;
       padding: 2rem 0 4rem;
-      overflow-x: hidden; /* Yatay taşmayı engelle */
+      overflow-x: hidden;
     }
 
     .iframe-container {
       position: relative;
       width: 100%;
       max-width: 550px;
-      padding-bottom: 100%; /* 1:1 oran için */
+      padding-bottom: 133.33%; /* 4:3 oran için (100% * 4/3) */
       overflow: hidden;
     }
 
@@ -111,7 +111,7 @@
       }
       .iframe-container {
         max-width: 100%;
-        padding-bottom: 100%; /* Kare oranını koru */
+        padding-bottom: 133.33%; /* Mobilde de 4:3 oran */
       }
       .iframe-container .responsive-iframe {
         width: 100%;
@@ -172,10 +172,9 @@
   <div id="bottomAdBanner">
     <div style="position: relative; display: inline-block;">
       <span onclick="document.getElementById('bottomAdBanner').style.display='none'" 
-            style="position: absolute; top: -10px; left: -10px; background: #000; color: #fff; border-radius: 50%; width: 20px; height: 20px; font-size: 14px; line-height: 20px; text-align: center; cursor: pointer;">×</span>
+           style="position: absolute; top: -10px; left: -10px; background: #333; color: #fff; border-radius: 50%; width: 20px; height: 20px; font-size: 14px; line-height: 20px; text-align: center; cursor: pointer;">×</span>
       <a href="https://cdy2db1.cool-meetlovers.com/whu8dv9?s1=blogger&cid=blogger" rel="nofollow sponsored" target="_blank">
-        <img alt="Ad Banner" 
-             src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEicK9Vdl5BRoHz98XLlM-8dcFKc65oEOnnue5t_243h7WkWE7XP7zn621T1H7OpFE0sq5O3awkXSLgGBbCaS9U_hGfyr8ZFEezw89NUM0XeD3BHPq0p2vlP2CrVb14MCj17lvUXAs0vK6z5w6L2GbvrAxDJtmfS44eBKWxCF3Cyg7BQRrCHlME0EXrC0cw/s1600/9xfkrf.gif">
+        <img alt="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEicK9Vdl5djBRoHs98XLlM-8dcFKc65oEOnnue5t_243h7WkWE7XP7zn621T1H7OpFE0sq5O3awkXSLgGBbCaS9U_hGfyr8ZFEezw89NUM0XeD3BHPq0p2vlP2CrVb14MCj17lvUXAs0vK6z5w6L2GbvrAxDJtmfS44eBKWxCF3Cyg7BQRrCHlME0EXrC0cw/s1600/9xfkrf.gif">
       </a>
     </div>
   </div>
