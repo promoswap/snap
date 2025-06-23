@@ -56,13 +56,11 @@
       padding: 2rem 0 4rem;
     }
 
-    .third-frame-wrapper iframe {
-      max-width: 550px;
+    .third-frame-wrapper .responsive-iframe {
       width: 100%;
+      max-width: 550px;
       height: 550px;
       border: none;
-      display: block;
-      margin: 0 auto;
     }
 
     footer {
@@ -92,14 +90,13 @@
       display: inline-block;
     }
 
-    @media (max-width: 480px) {
-      #bottomAdBanner {
-        bottom: 10px;
-        right: 10px;
+    @media (max-width: 600px) {
+      .third-frame-wrapper {
+        padding: 1rem;
       }
-
-      #bottomAdBanner img {
-        width: 50vw;
+      .third-frame-wrapper .responsive-iframe {
+        height: auto;
+        aspect-ratio: 1 / 1;
       }
     }
   </style>
@@ -142,6 +139,7 @@
 
     <div class="third-frame-wrapper">
       <iframe
+        class="responsive-iframe"
         scrolling="no"
         frameborder="0"
         src="https://bngdin.com/promo.php?c=798420&type=dynamic_banner&new_banner=1&db%5Bwidth%5D=550&db%5Bheight%5D=550&db%5Btype%5D=snapshot&db%5Bmodel_zone%5D=free&db%5Bheader%5D=0&db%5Bfooter%5D=footer_text_1&db%5Bmlang%5D=1&db%5Bfullscreen%5D=&db%5Bmname%5D=1&db%5Bmlink%5D=0&db%5Bmstatus%5D=1&db%5Bmsize%5D=custom&db%5Bmpad%5D=114&db%5Bmwidth%5D=320&db%5Bcolor_scheme%5D=default&db%5Bmborder%5D=solid&db%5Bmborder_color%5D=%23ffffff&db%5Bmborder_over_color%5D=%23a02239&db%5Bmshadow%5D=0&db%5Bmodels_by_geo%5D=1&db%5Bautoupdate%5D=1&db%5Btopmodels%5D=1&db%5Blanding%5D=chat&db%5Blogo_color%5D=positive&db%5Blogo_align%5D=left&db%5Bbg_color%5D=%23eeeeee&db%5Bfont_family%5D=Arial&db%5Btext_align%5D=center&db%5Btext_color%5D=%23000000&db%5Blink_color%5D=%23a02239&db%5Beffect%5D=auto&db%5Beffect_speed%5D=optimal&db%5Bmode%5D=mode1&db%5Badaptive%5D=0&db%5Bslider%5D=0&db%5Bchat%5D=0&db%5Bcategories%5D%5B%5D=couples">
